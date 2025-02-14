@@ -19,3 +19,58 @@ nota_final= nf(nota_sem(10, 10, 10, 10, 10, 100) , nota_sem(10, 10, 10, 10, 10, 
 
 
 print(nota_final/10)
+
+
+
+#Achando valor de pi
+n=10
+soma = 0
+def pin(n):
+    n = 10
+    soma = 0
+
+    for i in range(10000):
+        soma += (-1)**(i)*4/(2*i+1)
+    return soma
+print(pin(10000000000))
+
+
+#empacotamento de parâmetros
+
+def soma(a,b):  #caso queira colocar mais um parametro, precisamos adicionar na lista ou colocar o valor
+    print(a + b)
+l=[1,2]
+soma(*l)
+
+#a função print pode receber quantos parametros você passar
+
+def soma(*args):  #args = lista porem não podemos usar append/pop e etc
+    print(args)
+soma(1,2,3)
+
+#construa uma função que realize a soma de todos os valores recebidos
+def soma(*args):
+    valor = 0
+    for i in args:
+        valor+= i
+    print(valor)
+soma(20,20,20)
+
+#Função chamada média que aceita um número variável de argumentos e retorna a média
+def média(*args):
+    valor = 0
+    for i in args:
+        valor+= i
+    print(valor/len(args))
+média(20,20,20)
+
+
+#Crie uma função que recebe várias strings e as junta em uma única string separada por espaço
+
+def string(*args):
+    final= ""
+    for i in args:
+        final+=i + " "
+        print(final)
+
+string("r","t")
