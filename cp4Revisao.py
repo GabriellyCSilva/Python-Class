@@ -470,6 +470,115 @@ B = [list(linha) for linha in A]"""
 #Podemos alterar um elemento em um objeto com dimensões
 #objeto[i][i]...[i] = valor
 
+#EX 1 - Usando o matplotlib faça a imagem de um tabuleiro de xadrez
+
+#import matplotlib.pyplot as plt
+#Esse comando importa a biblioteca matplotlib.pyplot, que é usada para criar gráficos, imagens e visualizações em Python.
+#A gente está dando o apelido de plt pra facilitar quando for chamar as funções dessa biblioteca depois
+
+# Coordenadas rgb de x e y
+"""matriz_rgb = [
+    [[rx1y1, gx1y1, bx1y1], [rx1y2, gx1y2, bx1y2], [rx1y3, gx1y3, bx1y3]],
+    [[rx2y1, gx2y1, bx2y1], [rx2y2, gx2y2, bx2y2], [rx2y3, gx2y3, bx2y3]],
+    [[rx3y1, gx3y1, bx3y1], [rx3y2, gx3y2, bx3y2], [rx3y3, gx3y3, bx3y3]],
+]"""
+
+#Cada par de colchetes interno [[r, g, b], [r, g, b], ...] representa um pixel da imagem. A cor desse pixel é dada pelos valores r, g, b:
+#r → quantidade de vermelho (Red)
+#g → quantidade de verde (Green)
+#b → quantidade de azul (Blue)
+
+"""plt.imshow(matriz_rgb)"""
+#A função imshow() exibe uma imagem a partir de uma matriz de pixels.
+#No caso, ela pega a matriz_rgb e transforma em uma imagem colorida, onde cada pixel tem a cor que você definiu com RGB.
+
+"""plt.axis('off')"""
+#Remove os eixos X e Y que normalmente aparecem em um gráfico.
+#Isso deixa a imagem mais limpa, sem números ou marcações de eixo
+
+"""plt.show()"""
+#Manda o matplotlib mostrar a imagem na tela.
+#Tudo que foi configurado antes (imshow, axis, etc.) vai aparecer agora
+
+#EXEMPLO:
+"""import matplotlib.pyplot as plt  #para instalar usamos o comando pip install matplotlib no terminal 
+import numpy as np  # biblioteca para trabalhar com arrays mais fácil
+
+# Cria uma matriz 8x8, alternando 0 e 1
+tabuleiro = np.zeros((8, 8, 3))  # 8 linhas, 8 colunas, 3 cores (R,G,B)
+
+# Preenche os quadrados
+for linha in range(8):
+    for coluna in range(8):
+        if (linha + coluna) % 2 == 0:
+            cor = [1, 1, 1]  # Branco (RGB = 1,1,1)
+        else:
+            cor = [0, 0, 0]  # Preto (RGB = 0,0,0)
+        tabuleiro[linha, coluna] = cor  # Define a cor do quadrado
+
+# Exibe o tabuleiro
+plt.imshow(tabuleiro)
+plt.axis('off')
+plt.show()"""
+
+#EX1 - Printe somente as colunas pares da matriz
+
+"""l = int(input("Digite a qtde de linhas que gostaria de ter na matriz: "))
+c = int(input("Digite a qtde de colunas que gostaria de ter na matriz: "))
+
+matriz = []
+def criando_matriz():
+    global l
+    global c
+    global matriz
+    for i in range(l):
+        lista = []
+        for j in range(c):
+            lista.append(int(input("Digite os valores dentro da matriz: ")))
+        matriz.append(lista)
+    return matriz
+
+print(criando_matriz())
+
+
+def get_colunas_pares(matriz):
+    colunas_pares = []
+
+    for i in range(len(matriz)):
+        linha_pares = []
+        for j in range(len(matriz[0])):
+            if j % 2 == 0:
+                linha_pares.append(matriz[i][j])  #atribui o resultado dentro de uma lista para retornar
+        colunas_pares.append(linha_pares) #atribui a lista do resultado para trazer o retorno da variavel 
+
+    return colunas_pares"""
+
+#EX2 - Printe somente as linhas impares da matriz
+"""l = int(input("Digite a qtde de linhas que gostaria de ter na matriz: "))
+c = int(input("Digite a qtde de colunas que gostaria de ter na matriz: "))
+matriz = []
+def criando_matriz():
+    global l
+    global c
+    global matriz
+    for i in range(l):
+        lista = []
+        for j in range(c):
+            lista.append(int(input("Digite os valores dentro da matriz: ")))
+        matriz.append(lista)
+    return matriz
+
+print(criando_matriz())
+
+linhas_impares = []
+def impares(matriz):
+    global linhas_impares
+    for i in range(len(matriz)):
+        if i % 2 != 0:  # Se a linha for ímpar
+            linhas_impares.append(matriz[i])  # Adiciona a linha inteira
+    return linhas_impares
+print(impares(matriz))"""
+
 
 
 
