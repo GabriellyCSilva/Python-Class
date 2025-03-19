@@ -579,6 +579,17 @@ def impares(matriz):
     return linhas_impares
 print(impares(matriz))"""
 
+#EX4 - Printe somente a diagonal da matriz
+
+"""matriz = [[1,2,3],
+          [3,5,4],
+          [6,7,5]
+]
+
+for i in range(len(matriz)):  #leio a matriz para contar a qtd de vezes que preciso realizar o for
+    print(matriz[i][i]) #printo o primeiro i da diagonal
+    matriz[i][i] += 1 #somo o primeiro i com o primeiro i + 1 para "pular" para o proximo i """
+
 
 
 
