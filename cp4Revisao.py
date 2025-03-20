@@ -591,6 +591,76 @@ for i in range(len(matriz)):  #leio a matriz para contar a qtd de vezes que prec
     matriz[i][i] += 1 #somo o primeiro i com o primeiro i + 1 para "pular" para o proximo i """
 
 
+#EX5 - Faça um programa que calcule o traço de uma matriz
+"""matriz = [[1,2,3],
+          [3,5,4],
+          [6,7,5]
+]
+
+def soma_traço(matriz):
+    soma = 0  #soma para realizar o calculo
+    for i in range(len(matriz)):  #for para percorrer a matriz e len matriz para passar quantas vezes precisa relaizar o for
+        soma += matriz[i][i]  #o i como parametro porque ele começa igual a 0, ou seja, ele vai percorrer o [0][0] da matriz, depois ele vira 1, emtão ele vai para o [1][1] da matriz, que a proxima linha e proxima coluna
+    return soma
+print(soma_traço(matriz))"""
+
+
+#EX6 - Faça um programa que calcule a soma de duas matrizes
+# EX6 - Faça um programa que calcule a soma de duas matrizes
+# calculando a soma de duas matrizes // a somas
+
+"""matriza = [[1,2],
+           [4,5]]
+matrizb = [[1,2],
+           [4,5]]
+
+def somamatriz(matriza, matrizb):
+
+    if len(matriza) == len(matrizb) and len(matriza[0]) == len(matrizb[0]): # para somar duas matrizes a qtd de linhas e colunas precisam ser iguais, por isso a condição if
+        matrizc= []
+
+        for i in range(len(matriza)):
+            linha = []
+            for j in range(len(matriza[0])):
+                linha.append(matriza[i][j] + matrizb[i][j])
+                matrizc.append(linha)
+        return matrizc
+    return - 1  #retorna caso não entre dentrodo if, pode retornar qualquer coisa"""
+
+
+#EX7 - Faça um programa que lhe dê a transposta de uma matriz
+"""matriza = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for i in range(len(matriza[0])):  # colunas da matriz original
+    for j in range(len(matriza)):  # linhas da matriz original
+        print(matriza[j][i], end=" ")  # troca o índice
+    print()  # pula pra próxima linha da transposta"""
+
+
+#EX 8 - Faça um programa que calcule a multiplicação entre duas matrizes
+"""matriza = [[1,2],
+           [4,5]]
+matrizb = [[1,2],
+           [4,5]]
+
+def somamatriz(matriza, matrizb):
+
+    if len(matriza) == len(matrizb) and len(matriza[0]) == len(matrizb[0]): # para somar duas matrizes a qtd de linhas e colunas precisam ser iguais, por isso a condição if
+        matrizc= []
+
+        for i in range(len(matriza)):
+            linha = []
+            for j in range(len(matriza[0])):
+                linha.append(matriza[i][j] * matrizb[i][j])
+                matrizc.append(linha)
+        return matrizc
+print(somamatriz(matriza,matrizb))
+"""
+
 
 
 
